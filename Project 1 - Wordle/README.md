@@ -2,7 +2,7 @@
 
 Submitted by: **Balaj Khalid**
 
-**Wordle** is an app that ... [TODO] 
+**Wordle** is a word puzzle game where players have to guess a secret five-letter word within a limited number of attempts. The game provides feedback to the player after each guess to help them deduce the correct word.
 
 Time spent: **2.5** hours spent in total
 
