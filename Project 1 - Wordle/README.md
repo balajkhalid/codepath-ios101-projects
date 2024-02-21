@@ -20,8 +20,13 @@ The following **optional** features are implemented:
 - [x] Run the app on a device rather than in the simulator
 
 ## Video Walkthrough
-<div style="position: relative; padding-bottom: 64.86486486486486%; height: 0;"><iframe src="https://www.loom.com/embed/0568b26c244342a3ae01cef5471d539e?sid=1f731886-e8af-4350-98d5-2ce9da911b98" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
+<div>
+    <a href="https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e">
+    </a>
+    <a href="https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0568b26c244342a3ae01cef5471d539e-with-play.gif">
+    </a>
+  </div>
 ## License
 
     Copyright [2024] [Balaj Khalid]
