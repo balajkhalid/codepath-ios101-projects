@@ -20,6 +20,17 @@ The following **optional** features are implemented:
 - [x] Run the app on a device rather than in the simulator
 
 ## Video Walkthrough
+<div>
+    <a href="https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e">
+    </a>
+    <a href="https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0568b26c244342a3ae01cef5471d539e-with-play.gif">
+    </a>
+  </div>
+
+[Complete Video](https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e?sid=5eb4a6d5-3a6d-45da-a344-6fa098def579) walkthrough. 
+
+[Testing on device](https://imgur.com/a/hsjLWlW) walkthrough.
 
 
 ## License
