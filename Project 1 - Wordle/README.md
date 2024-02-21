@@ -27,6 +27,11 @@ The following **optional** features are implemented:
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0568b26c244342a3ae01cef5471d539e-with-play.gif">
     </a>
   </div>
+
+Complete Video: (https://www.loom.com/share/0568b26c244342a3ae01cef5471d539e?sid=5eb4a6d5-3a6d-45da-a344-6fa098def579)
+Testing on device: (https://imgur.com/a/hsjLWlW)
+
+
 ## License
 
     Copyright [2024] [Balaj Khalid]
