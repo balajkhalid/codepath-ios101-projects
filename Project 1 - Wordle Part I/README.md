@@ -1,4 +1,4 @@
-# Project 1 - *WORDLE*
+# Project 1 - *Wordle Part 1*
 
 Submitted by: **Balaj Khalid**
 
