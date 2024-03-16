@@ -7,12 +7,33 @@
 
 import Foundation
 
+extension String {
+    func decodeHTML() -> String {
+        var decodedString: String = self
+        
+        if let encodedData = self.data(using: .utf8) {
+            let attributedOptions: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+                .documentType: NSAttributedString.DocumentType.html,
+                .characterEncoding: String.Encoding.utf8.rawValue
+            ]
+            
+            if let attributedString = try? NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil) {
+                decodedString = attributedString.string
+            }
+        }
+        
+        return decodedString
+    }
+}
+
+
 class TriviaQuestionService {
-  static func fetchQuestion(noOfQuestions: Int,
-//                            category: Int,
-//                            Difficulty: String,
+  static func fetchQuestion(numQuestions: Int,
+                            category: String,
+                            difficulty: String,
                             completion: (([TriviaQuestion]) -> Void)? = nil) {
-      let parameters = "amount=\(noOfQuestions)"
+      
+      let parameters = params(numQuestions: numQuestions, category: category, difficulty: difficulty)
       let url = URL(string: "https://opentdb.com/api.php?\(parameters)")!
       // create a data task and pass in the URL
           let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -38,6 +59,47 @@ class TriviaQuestionService {
           }
           task.resume() // resume the task and fire the request
   }
+    private static func params(numQuestions: Int, category: String, difficulty: String) -> String {
+        let categoryDict = [
+          "General Knowledge": "9",
+          "Entertainment: Books": "10",
+          "Entertainment: Film": "11",
+          "Entertainment: Music": "12",
+          "Entertainment: Musicals & Theatres": "13",
+          "Entertainment: Television": "14",
+          "Entertainment: Video Games": "15",
+          "Entertainment: Board Games": "16",
+          "Science & Nature": "17",
+          "Science: Computers": "18",
+          "Science: Mathematics": "19",
+          "Mythology": "20",
+          "Sports": "21",
+          "Geography": "22",
+          "History": "23",
+          "Politics": "24",
+          "Art": "25",
+          "Celebrities": "26",
+          "Animals": "27",
+          "Vehicles": "28",
+          "Entertainment: Comics": "29",
+          "Science: Gadgets": "30",
+          "Entertainment: Japanese Anime & Manga": "31",
+          "Entertainment: Cartoon & Animations": "32"
+        ]
+        let categoryValue = categoryDict[category] ?? "default"
+        
+        var parameters = "amount=\(numQuestions)"
+        
+        if categoryValue != "default" {
+            parameters = parameters + "&category=\(categoryValue)"
+        }
+        if difficulty != "default"{
+            parameters = parameters + "&difficulty=\(difficulty)"
+        }
+        
+        return parameters
+    }
+    
     private static func parse(data: Data) -> [TriviaQuestion] {
         // transform the data we received into a dictionary [String: Any]
         let jsonDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
@@ -47,15 +109,16 @@ class TriviaQuestionService {
         var triviaQuestions = [TriviaQuestion]()
         results.forEach {element in
             // type
-            let type = element["type"] as! String
+            let type = (element["type"] as! String).decodeHTML()
             // category
-            let category = element["category"] as! String
+            let category = (element["category"] as! String).decodeHTML()
             // question
-            let question = element["question"] as! String
+            let question = (element["question"] as! String).decodeHTML()
             // correctAnswer
-            let correctAnswer = element["correct_answer"] as! String
+            let correctAnswer = (element["correct_answer"] as! String).decodeHTML()
             // incorrectAnswers
-            let incorrectAnswers = element["incorrect_answers"] as! [String]
+            let incorrectAnswersRaw = element["incorrect_answers"] as! [String]
+            let incorrectAnswers = incorrectAnswersRaw.map { $0.decodeHTML() }
             
             triviaQuestions.append(TriviaQuestion(type: type,
                                                   category: category,

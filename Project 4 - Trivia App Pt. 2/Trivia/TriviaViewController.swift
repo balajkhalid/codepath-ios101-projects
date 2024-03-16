@@ -17,24 +17,28 @@ class TriviaViewController: UIViewController {
   @IBOutlet weak var answerButton1: UIButton!
   @IBOutlet weak var answerButton2: UIButton!
   @IBOutlet weak var answerButton3: UIButton!
+    
+  @IBOutlet weak var settingsGear: UIImageView!
   
   private var questions = [TriviaQuestion]()
   private var currQuestionIndex = 0
   private var numCorrectQuestions = 0
+  private var settings = SettingsManager()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     addGradient()
     questionContainerView.layer.cornerRadius = 8.0
-      TriviaQuestionService.fetchQuestion(noOfQuestions: 5) {question in
+      TriviaQuestionService.fetchQuestion(numQuestions: settings.numQuestions,
+                                          category: settings.catergory,
+                                          difficulty: settings.difficulty) {question in
           self.questions = question
           self.updateQuestion(withQuestionIndex: 0)
           
-          // parts left
-          // cater for buttons in type: true/false
           // category and difficulty
-          // output after every question if answer is correct or not
       }
+      
+      
       
   }
   
@@ -51,14 +55,20 @@ class TriviaViewController: UIViewController {
       answerButton1.setTitle(answers[1], for: .normal)
       answerButton1.isHidden = false
     }
-    if answers.count > 2 {
-      answerButton2.setTitle(answers[2], for: .normal)
-      answerButton2.isHidden = false
+    if question.type == "multiple" {
+        if answers.count > 2 {
+          answerButton2.setTitle(answers[2], for: .normal)
+          answerButton2.isHidden = false
+        }
+        if answers.count > 3 {
+          answerButton3.setTitle(answers[3], for: .normal)
+          answerButton3.isHidden = false
+        }
+    } else {
+        answerButton2.isHidden = true
+        answerButton3.isHidden = true
     }
-    if answers.count > 3 {
-      answerButton3.setTitle(answers[3], for: .normal)
-      answerButton3.isHidden = false
-    }
+    
   }
   
   private func updateToNextQuestion(answer: String) {
@@ -70,7 +80,20 @@ class TriviaViewController: UIViewController {
       showFinalScore()
       return
     }
-    updateQuestion(withQuestionIndex: currQuestionIndex)
+    questionScoreUpdate(answer: answer)
+//    updateQuestion(withQuestionIndex: currQuestionIndex)
+  }
+    
+  private func questionScoreUpdate(answer: String){
+      let stringToDisplay = isCorrectAnswer(answer) ? "Your answer was correct!" : "Your answer was incorrect"
+      let alertController = UIAlertController(title: stringToDisplay,
+                                              message: "",
+                                              preferredStyle: .alert)
+      let nextQuestionAction = UIAlertAction(title: "Next Question", style: .default) { [unowned self] _ in
+        updateQuestion(withQuestionIndex: currQuestionIndex)
+      }
+      alertController.addAction(nextQuestionAction)
+      present(alertController, animated: true, completion: nil)
   }
   
   private func isCorrectAnswer(_ answer: String) -> Bool {
@@ -84,6 +107,11 @@ class TriviaViewController: UIViewController {
     let resetAction = UIAlertAction(title: "Restart", style: .default) { [unowned self] _ in
       currQuestionIndex = 0
       numCorrectQuestions = 0
+      TriviaQuestionService.fetchQuestion(numQuestions: settings.numQuestions,
+                                          category: settings.catergory,
+                                          difficulty: settings.difficulty) {question in
+        self.questions = question
+      }
       updateQuestion(withQuestionIndex: currQuestionIndex)
     }
     alertController.addAction(resetAction)
