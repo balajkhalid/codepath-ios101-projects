@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -221,15 +222,27 @@
                                     <action selector="difficultyBtnAction:" destination="GUy-pF-qTd" eventType="touchUpInside" id="1iG-h1-aT2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vis-zi-Rt4">
+                                <rect key="frame" x="132.66666666666666" y="557" width="127.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save Settings">
+                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveSettingsAction:" destination="GUy-pF-qTd" eventType="touchUpInside" id="B4H-6h-sVX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jya-Ve-Kgh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Vis-zi-Rt4" firstAttribute="centerX" secondItem="5jT-js-vVf" secondAttribute="centerX" id="1e0-d5-dic"/>
                             <constraint firstItem="TLN-WE-P6T" firstAttribute="top" secondItem="FDs-2l-9KH" secondAttribute="bottom" constant="19" id="E1K-JZ-DDt"/>
                             <constraint firstItem="N0f-Td-tk2" firstAttribute="top" secondItem="Jya-Ve-Kgh" secondAttribute="top" constant="50" id="Gvb-MP-Zai"/>
                             <constraint firstItem="tRf-vb-Hz8" firstAttribute="leading" secondItem="Lf2-mg-smP" secondAttribute="trailing" constant="36" id="QgV-Q8-Y2h"/>
                             <constraint firstItem="Lf2-mg-smP" firstAttribute="top" secondItem="N0f-Td-tk2" secondAttribute="bottom" constant="29" id="SDd-24-FUm"/>
                             <constraint firstItem="hlH-cm-hEL" firstAttribute="top" secondItem="N0f-Td-tk2" secondAttribute="bottom" constant="28" id="SyI-sO-EHr"/>
+                            <constraint firstItem="Vis-zi-Rt4" firstAttribute="centerY" secondItem="5jT-js-vVf" secondAttribute="centerY" constant="148.5" id="VTe-al-kwd"/>
                             <constraint firstItem="pMi-c9-3qr" firstAttribute="leading" secondItem="FDs-2l-9KH" secondAttribute="trailing" constant="46" id="XX9-xm-A0s"/>
                             <constraint firstItem="YQc-Cc-wd6" firstAttribute="leading" secondItem="TLN-WE-P6T" secondAttribute="trailing" constant="49" id="be4-4d-c8q"/>
                             <constraint firstItem="Lf2-mg-smP" firstAttribute="centerX" secondItem="5jT-js-vVf" secondAttribute="centerX" constant="-82" id="cSs-zk-MGY"/>
@@ -247,7 +260,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DzN-rb-NQE"/>
                     <connections>
-                        <outlet property="backButton" destination="DzN-rb-NQE" id="JPm-oV-VBT"/>
+                        <outlet property="backButton" destination="DzN-rb-NQE" id="RoL-xa-lPf"/>
                         <outlet property="category" destination="pMi-c9-3qr" id="5Oo-pE-HpY"/>
                         <outlet property="difficulty" destination="YQc-Cc-wd6" id="Zdt-ib-krB"/>
                         <outlet property="numQuestionsLabel" destination="hlH-cm-hEL" id="Xnz-8Y-XuA"/>
@@ -256,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzG-m5-hTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="4"/>
+            <point key="canvasLocation" x="1722.9007633587785" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wcr-sa-pCR">
@@ -280,6 +293,9 @@
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

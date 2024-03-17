@@ -39,6 +39,7 @@ class SettingsViewController: UIViewController {
     navigationItem.leftBarButtonItem?.tintColor = .white
     
     let settingsDictionary = SettingsManager.shared.settingsDictionary
+      
     let numGuesses = settingsDictionary[kNumGuessesKey] as! Int
     numGuessesStepper.value = Double(numGuesses)
     numGuessesLabel.text = "\(numGuesses)"

@@ -26,8 +26,6 @@ class TriviaViewController: UIViewController, SettingsViewControllerDelegate {
   private var numCorrectQuestions = 0
   private var settings = SettingsManager()
     
-  
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     addGradient()
@@ -48,16 +46,21 @@ class TriviaViewController: UIViewController, SettingsViewControllerDelegate {
   }
     
     @objc func imageClicked() {
-        // Instantiate the destination view controller
-//        let destinationVC = SettingsViewController()
-//        
-//        // Push the destination view controller onto the navigation stack
-//        navigationController?.pushViewController(destinationVC, animated: true)
         transitionToSettingsViewController()
     }
     
     func didChangeSettings(with settings: [String : Any]) {
-        // add later
+//        print(settings)
+        TriviaQuestionService.fetchQuestion(numQuestions: settings["numQuestions"] as! Int,
+                                            category: settings["category"] as! String,
+                                            difficulty: settings["difficulty"] as! String){question in
+            self.questions = question
+            self.currQuestionIndex = 0
+            self.numCorrectQuestions = 0
+            self.updateQuestion(withQuestionIndex: 0)
+            
+            // category and difficulty
+        }
     }
         
         // Function to transition to secondViewController
