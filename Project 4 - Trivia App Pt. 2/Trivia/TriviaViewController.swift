@@ -36,7 +36,6 @@ class TriviaViewController: UIViewController {
           self.updateQuestion(withQuestionIndex: 0)
           
           // category and difficulty
-          // need a fix :(
       }
       
       
@@ -73,20 +72,27 @@ class TriviaViewController: UIViewController {
   }
   
   private func updateToNextQuestion(answer: String) {
+    var correctAns = false
     if isCorrectAnswer(answer) {
       numCorrectQuestions += 1
+      correctAns = true
     }
     currQuestionIndex += 1
     guard currQuestionIndex < questions.count else {
       showFinalScore()
       return
     }
-    questionScoreUpdate(answer: answer)
+    questionScoreUpdate(correctAns)
 //    updateQuestion(withQuestionIndex: currQuestionIndex)
   }
     
-  private func questionScoreUpdate(answer: String){
-      let stringToDisplay = isCorrectAnswer(answer) ? "Your answer was correct!" : "Your answer was incorrect"
+  private func questionScoreUpdate(_ correctAns : Bool){
+      var stringToDisplay: String
+      if (correctAns) {
+          stringToDisplay = "Your answer was correct!"
+      } else {
+          stringToDisplay = "Your answer was incorrect!"
+      }
       let alertController = UIAlertController(title: stringToDisplay,
                                               message: "",
                                               preferredStyle: .alert)
