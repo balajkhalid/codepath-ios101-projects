@@ -36,6 +36,7 @@ class TriviaViewController: UIViewController {
           self.updateQuestion(withQuestionIndex: 0)
           
           // category and difficulty
+          // need a fix :(
       }
       
       
