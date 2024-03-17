@@ -7,7 +7,8 @@
 
 import UIKit
 
-class TriviaViewController: UIViewController {
+class TriviaViewController: UIViewController, SettingsViewControllerDelegate {
+    
   
   @IBOutlet weak var currentQuestionNumberLabel: UILabel!
   @IBOutlet weak var questionContainerView: UIView!
@@ -24,13 +25,15 @@ class TriviaViewController: UIViewController {
   private var currQuestionIndex = 0
   private var numCorrectQuestions = 0
   private var settings = SettingsManager()
+    
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     addGradient()
     questionContainerView.layer.cornerRadius = 8.0
       TriviaQuestionService.fetchQuestion(numQuestions: settings.numQuestions,
-                                          category: settings.catergory,
+                                          category: settings.category,
                                           difficulty: settings.difficulty) {question in
           self.questions = question
           self.updateQuestion(withQuestionIndex: 0)
@@ -38,9 +41,34 @@ class TriviaViewController: UIViewController {
           // category and difficulty
       }
       
-      
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageClicked))
+    settingsGear.addGestureRecognizer(tapGesture)
+    settingsGear.isUserInteractionEnabled = true
       
   }
+    
+    @objc func imageClicked() {
+        // Instantiate the destination view controller
+//        let destinationVC = SettingsViewController()
+//        
+//        // Push the destination view controller onto the navigation stack
+//        navigationController?.pushViewController(destinationVC, animated: true)
+        transitionToSettingsViewController()
+    }
+    
+    func didChangeSettings(with settings: [String : Any]) {
+        // add later
+    }
+        
+        // Function to transition to secondViewController
+    func transitionToSettingsViewController() {
+        guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController else {
+                    return
+                }
+        secondVC.delegate = self
+        navigationController?.pushViewController(secondVC, animated: true)
+    }
+
   
   private func updateQuestion(withQuestionIndex questionIndex: Int) {
     currentQuestionNumberLabel.text = "Question: \(questionIndex + 1)/\(questions.count)"
@@ -115,7 +143,7 @@ class TriviaViewController: UIViewController {
       currQuestionIndex = 0
       numCorrectQuestions = 0
       TriviaQuestionService.fetchQuestion(numQuestions: settings.numQuestions,
-                                          category: settings.catergory,
+                                          category: settings.category,
                                           difficulty: settings.difficulty) {question in
         self.questions = question
       }
@@ -150,5 +178,6 @@ class TriviaViewController: UIViewController {
   @IBAction func didTapAnswerButton3(_ sender: UIButton) {
     updateToNextQuestion(answer: sender.titleLabel?.text ?? "")
   }
+    
 }
 

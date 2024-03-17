@@ -11,25 +11,25 @@ class SettingsManager {
 
   var numQuestions = 5
   var difficulty = "default"
-  var catergory = "default"
+  var category = "default"
     
    var settingsDictionary: [String: Any] {
       return ["numQuestions": numQuestions,
               "difficulty": difficulty,
-              "catergory": catergory]
+              "category": category]
     }
   
   static let shared = SettingsManager()
     
-  func set(numQuestios: Int) {
-    self.numQuestions = max(50, min(5, numQuestios))
+  func set(numQuestions: Int) {
+    self.numQuestions = numQuestions
   }
   
   func set(difficulty: String) {
       self.difficulty = difficulty
   }
     
-  func set(catergory: String) {
-    self.catergory = catergory
+  func set(category: String) {
+    self.category = category
   }
 }
