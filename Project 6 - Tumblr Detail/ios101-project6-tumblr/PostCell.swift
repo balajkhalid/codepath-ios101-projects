@@ -13,6 +13,8 @@ class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        postImageView.layer.cornerRadius = 18
+        postImageView.layer.borderWidth = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
