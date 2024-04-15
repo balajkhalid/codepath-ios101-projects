@@ -80,12 +80,12 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 [This section will be completed in Unit 9]
 
 ## Features
-[ ] Registeration Screen
-[ ] Login Screen
-[ ] Home Page
-[ ] Post a game for trade
-[ ] User can trade a game
-[ ] Search trades
+- [ ] Registeration Screen
+- [ ] Login Screen
+- [ ] Home Page
+- [ ] Post a game for trade
+- [ ] User can trade a game
+- [ ] Search trades
 
 ## Sprint
 * **Week 1:** Design application's basic ideation, wireframes and logo.
