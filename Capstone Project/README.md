@@ -73,7 +73,7 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Wireframes
 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="home.png" width=600>
 
 ## Schema 
 
