@@ -30,6 +30,7 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 * User can create a new account
 * User can login
+* User can recover their password
 * User can post their game for trade
 * User can trade a game
 
@@ -44,6 +45,8 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
     - User can create a new account
 * **Login Screen** 
     - User can login
+* **Forgot Password** 
+    - User can recover their password
 * **Home Page** 
     - User can view games up for trade near them
 * **Creation** 
@@ -73,25 +76,31 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Wireframes
 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/Home.png" height=600>
+
+[Link](https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/GameSwap.pdf) to complete wireframes.
 
 ## Schema 
 
 [This section will be completed in Unit 9]
 
-## Features
+## Functionality Implemented
+- [x] Logo Design
 - [ ] Registeration Screen
 - [ ] Login Screen
+- [ ] Forgot Password
 - [ ] Home Page
 - [ ] Post a game for trade
 - [ ] User can trade a game
 - [ ] Search trades
 
 ## Sprint
-* **Week 1:** Design application's basic ideation, wireframes and logo.
-* **Week 2:** Develop account registration and login screens and home page.
+* **Week 1:** Design application's basic ideation, wireframes, logo and login screen.
+* **Week 2:** Develop account registration screens, forgot password and home page.
 * **Week 3:** Develop trade creation and execution mechanism.
 
 ## Video Walkthrough
+
+## Reflection
 
 
