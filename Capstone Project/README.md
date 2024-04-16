@@ -40,20 +40,19 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 * User can view deals near them
 
 ### 2. Screen Archetypes
-
-* [ ] **Registration Screen** 
+* **Registration Screen** 
     - User can create a new account
-* [ ] **Login Screen** 
+* **Login Screen** 
     - User can login
-* [ ] **Home Page** 
+* **Home Page** 
     - User can view games up for trade near them
-* [ ] **Creation** 
+* **Creation** 
     - User can create a trade
-* [ ] **Trade** 
+* **Trade** 
     - User can setup a trade
-* [ ] **Search** 
+* **Search** 
     - User can search for trades
-* [ ] **Chat** 
+* **Chat** 
     - User can chat with other users to discuss their trade details
 
 ### 3. Navigation
@@ -74,23 +73,25 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
 [This section will be completed in Unit 9]
 
-### Models
+## Features
+- [ ] Registeration Screen
+- [ ] Login Screen
+- [ ] Home Page
+- [ ] Post a game for trade
+- [ ] User can trade a game
+- [ ] Search trades
 
-[Add table of models]
+## Sprint
+* **Week 1:** Design application's basic ideation, wireframes and logo.
+* **Week 2:** Develop account registration and login screens and home page.
+* **Week 3:** Develop trade creation and execution mechanism.
 
-### Networking
+## Video Walkthrough
 
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+

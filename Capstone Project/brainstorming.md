@@ -11,8 +11,6 @@
 ## Evaluating App Ideas
 
 1. GameSwap
-Introducing GameSwap, the ultimate destination for trading used games hassle-free. GameSwap connects gamers, allowing them to buy, sell, or trade pre-owned games easily. Say goodbye to cluttered shelves and outdated games—browse a wide selection of titles, negotiate deals securely, and track your gaming inventory effortlessly.
-
     - **Description:** GameSwap is your go-to online marketplace for trading used games. Connect with fellow gamers to buy, sell, or trade pre-owned games. Browse a wide selection of titles, negotiate deals securely, and track your gaming inventory effortlessly with GameSwap. Join the gaming community and level up your collection today.
     - **Category:** Online marketplace.
     - **Mobile:** GameSwap's mobile app empowers users with the convenience of snapping pictures of their games and instantly posting them for trade on-the-go. Leveraging location services, the app ensures accurate detection and updates, making transactions smoother than ever.
