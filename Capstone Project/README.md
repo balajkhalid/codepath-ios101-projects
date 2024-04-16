@@ -81,7 +81,8 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 [This section will be completed in Unit 9]
 
-## Features
+## Functionality Implemented
+- [x] Logo Design
 - [ ] Registeration Screen
 - [ ] Login Screen
 - [ ] Home Page
