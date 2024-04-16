@@ -73,7 +73,7 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Wireframes
 
-<img src="https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/Home.png" height=200>
+<img src="https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/Home.png" height=600>
 
 [Link](https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/GameSwap.pdf) to complete wireframes.
 
