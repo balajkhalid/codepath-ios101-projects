@@ -86,8 +86,8 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Functionality Implemented
 - [x] Logo Design
+- [x] Login Screen
 - [ ] Registeration Screen
-- [ ] Login Screen
 - [ ] Forgot Password
 - [ ] Home Page
 - [ ] Post a game for trade
@@ -101,6 +101,16 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 
 ## Video Walkthrough
 
+<div>
+    <a href="https://www.loom.com/share/f58f043257f442e18f484dca9ed4f8b2">
+    </a>
+    <a href="https://www.loom.com/share/f58f043257f442e18f484dca9ed4f8b2">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f58f043257f442e18f484dca9ed4f8b2-00001.jpg">
+    </a>
+  </div>
+
 ## Reflection
 
-
+* Enhance the security of the application by implementing robust text validation techniques on the Login Screen to prevent unauthorized access.
+* Evaluate the color scheme of the application to ensure it is accessible and accommodating for users with visual impairments, promoting inclusivity.
+* Incorporate a feature that allows users to adjust the font size within the application, making it more user-friendly and accessible to individuals with varying visual needs.
