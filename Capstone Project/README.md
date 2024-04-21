@@ -87,27 +87,39 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 ## Functionality Implemented
 - [x] Logo Design
 - [x] Login Screen
+- [x] Home Page
+- [x] Game Details
+- [x] Inbox
 - [ ] Registeration Screen
 - [ ] Forgot Password
-- [ ] Home Page
 - [ ] Post a game for trade
-- [ ] User can trade a game
-- [ ] Search trades
+- [ ] Profile
 
 ## Sprint
 * **Week 1:** Design application's basic ideation, wireframes, logo and login screen.
-* **Week 2:** Develop account registration screens, forgot password and home page.
-* **Week 3:** Develop trade creation and execution mechanism.
+* **Week 2:** Develop home page, game details and inbox functionalities.
+* **Week 3:** Develop registeration, forgot password, posting a game for trade and profile functions.
 
 ## Video Walkthrough
 
+### Week 8
 <div>
     <a href="https://www.loom.com/share/f58f043257f442e18f484dca9ed4f8b2">
     </a>
     <a href="https://www.loom.com/share/f58f043257f442e18f484dca9ed4f8b2">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f58f043257f442e18f484dca9ed4f8b2-00001.jpg">
     </a>
+</div>
+
+### Week 9
+
+<div>
+    <a href="https://www.loom.com/share/f192ecc5450a4670bc3d0abd6f632fe4"></a>
+    <a href="https://www.loom.com/share/f192ecc5450a4670bc3d0abd6f632fe4">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f192ecc5450a4670bc3d0abd6f632fe4-with-play.gif">
+    </a>
   </div>
+
 
 ## Reflection
 
