@@ -114,7 +114,8 @@ GameSwap is your go-to online marketplace for trading used games. Connect with f
 ### Week 9
 
 <div>
-    <a href="https://www.loom.com/share/f192ecc5450a4670bc3d0abd6f632fe4"></a>
+    <a href="https://www.loom.com/share/f192ecc5450a4670bc3d0abd6f632fe4">
+    </a>
     <a href="https://www.loom.com/share/f192ecc5450a4670bc3d0abd6f632fe4">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f192ecc5450a4670bc3d0abd6f632fe4-with-play.gif">
     </a>
