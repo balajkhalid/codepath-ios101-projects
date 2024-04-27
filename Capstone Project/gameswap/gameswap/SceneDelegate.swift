@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if let loggedUsername = UserDefaults.standard.string(forKey: "username"){
+        if let uid = UserDefaults.standard.string(forKey: "uid"){
             let mainTabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
             window?.rootViewController = mainTabBarController
         } else {
@@ -66,11 +66,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = vc
         
         // add animation
-        UIView.transition(with: window,
-                          duration: 0.5,
-                          options: [.transitionFlipFromLeft],
-                          animations: nil,
-                          completion: nil)
+        if animated == true {
+            UIView.transition(with: window,
+                              duration: 0.5,
+                              options: [.transitionFlipFromLeft],
+                              animations: nil,
+                              completion: nil)
+        }
     }
 
 
