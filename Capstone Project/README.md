@@ -13,6 +13,8 @@
 
 GameSwap is your go-to online marketplace for trading used games. Connect with fellow gamers to buy, sell, or trade pre-owned games. Browse a wide selection of titles, negotiate deals securely, and track your gaming inventory effortlessly with GameSwap. Join the gaming community and level up your collection today.
 
+<img src="https://github.com/balajkhalid/codepath-ios101-projects/blob/main/Capstone%20Project/GameSwap.png" height=600>
+
 ### App Evaluation
 
 - **Category:** Online marketplace.
